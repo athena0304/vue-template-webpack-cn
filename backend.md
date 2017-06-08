@@ -31,9 +31,11 @@ module.exports = {
 > 必须是你本地文件系统的绝对路径
 
 This is where the `index.html` (with injected asset URLs) will be generated.
-这里就是`index.html`（有插入的资源URL）生成的地方
+这里就是`index.html`（有插入的资源URL）生成的地方.
 
 If you are using this template with a backend-framework, you can edit `index.html` accordingly and point this path to a view file rendered by your backend app, e.g. `app/views/layouts/application.html.erb` for a Rails app, or `resources/views/index.blade.php` for a Laravel app.
+
+如果你正是使用一个后端框架，你可以编辑`index.html`
 
 ### `build.assetsRoot`
 
