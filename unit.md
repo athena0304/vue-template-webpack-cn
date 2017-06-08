@@ -1,32 +1,34 @@
-# Unit Testing
+# 单元测试
 
-An overview of the tools used by this boilerplate for unit testing:
+该模板使用的单元测试总览：
 
-- [Karma](https://karma-runner.github.io/): the test runner that launches browsers, runs the tests and reports the results to us.
-- [karma-webpack](https://github.com/webpack/karma-webpack): the plugin for Karma that bundles our tests using Webpack.
-- [Mocha](https://mochajs.org/): the test framework that we write test specs with.
-- [Chai](http://chaijs.com/): test assertion library that provides better assertion syntax.
-- [Sinon](http://sinonjs.org/): test utility library that provides spies, stubs and mocks.
+- [Karma](https://karma-runner.github.io/): 测试运行器，启动浏览器运行测试然后向我们报告结果。
+- [karma-webpack](https://github.com/webpack/karma-webpack): Karma的插件，使用Webpack将我们的测试进行打包
+- [Mocha](https://mochajs.org/): 用来写测试规格的测试框架。
+- [Chai](http://chaijs.com/): 提供更好的断言语法的断言库。
+- [Sinon](http://sinonjs.org/): 测试工具库，提供spies, stubs 和 mocks。
 
-Chai and Sinon are integrated using [karma-sinon-chai](https://github.com/kmees/karma-sinon-chai), so all Chai interfaces (`should`, `expect`, `assert`) and `sinon` are globally available in test files.
+Chai and Sinon整合在了[karma-sinon-chai](https://github.com/kmees/karma-sinon-chai)，所以所有的Chai界面（`should`, `expect`, `assert`）和`sinon`在测试文件中都是全局可用的。
 
-And the files:
+关于文件:
 
 - `index.js`
 
-  This is the entry file used by `karma-webpack` to bundle all the test code and source code (for coverage purposes). You can ignore it for the most part.
+
+  使用了`karma-webpack`打包所有的测试代码和源码（为了覆盖）的入口文件。在大多数情况都可以忽略它。
 
 - `specs/`
 
-  This directory is where you write your actual tests. You can use full ES2015+ and all supported Webpack loaders in your tests.
+  这里就是你实际写测试的地方。你可以完全使用ES2015+和所有支持的Webpack loaders。
 
 - `karma.conf.js`
 
-  This is the Karma configuration file. See [Karma docs](https://karma-runner.github.io/) for more details.
+  这是Karma配置文件。查看[Karma docs](https://karma-runner.github.io/) 获取更多细节。
 
-## Running Tests in More Browsers
+## 在更多的浏览器里运行测试
 
-You can run the tests in multiple real browsers by installing more [karma launchers](https://karma-runner.github.io/1.0/config/browsers.html) and adjusting the `browsers` field in `test/unit/karma.conf.js`.
+你可以通过安装更多的[karma launchers](https://karma-runner.github.io/1.0/config/browsers.html)在多个真是的浏览器里运行测试，并且可以在`test/unit/karma.conf.js`调整 `browsers`部分
+
 
 ## Mocking Dependencies
 
