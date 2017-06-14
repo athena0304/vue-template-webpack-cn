@@ -27,7 +27,7 @@ Chai and Sinon整合在了[karma-sinon-chai](https://github.com/kmees/karma-sino
 
 ## 在更多的浏览器里运行测试
 
-你可以通过安装更多的[karma launchers](https://karma-runner.github.io/1.0/config/browsers.html)在多个真是的浏览器里运行测试，并且可以在`test/unit/karma.conf.js`调整 `browsers`部分
+你可以通过安装更多的[karma launchers](https://karma-runner.github.io/1.0/config/browsers.html)在多个真实的浏览器里运行测试，并且可以在`test/unit/karma.conf.js`调整 `browsers`部分
 
 
 ## Mocking Dependencies

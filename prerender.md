@@ -1,24 +1,24 @@
-# Prerendering for SEO
+# SEO预渲染
 
 
 如果布到生产环境后预渲染路由不会明显的变化，就使用这个经过测试的适用于Vue的插件：[prerender-spa-plugin](https://www.npmjs.com/package/prerender-spa-plugin)。对于那些确实频繁变化的页面，[Prerender.io](https://prerender.io/) 和 [Netlify](https://www.netlify.com/pricing) 都提供了常规的对于搜索引擎预渲染的方案。
 
-## Using `prerender-spa-plugin`
+## 使用 `prerender-spa-plugin`
 
-1. Install it as a dev dependency:
+1. 作为一个dev依赖进行安装:
 
 ```bash
 npm install --save-dev prerender-spa-plugin
 ```
 
-2. Require it in **build/webpack.prod.conf.js**:
+2. 在**build/webpack.prod.conf.js**引用进来:
 
 ```js
 // This line should go at the top of the file where other 'imports' live in
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
 ```
 
-3. Configure it in the `plugins` array (also in **build/webpack.prod.conf.js**):
+3. 在`plugins` 数组进行配置 (也在 **build/webpack.prod.conf.js** 里):
 
 ```js
 new PrerenderSpaPlugin(
@@ -29,9 +29,10 @@ new PrerenderSpaPlugin(
 )
 ```
 
-If you also wanted to prerender `/about` and `/contact`, then that array would be `[ '/', '/about', '/contact' ]`.
+如果你也想预渲染 `/about` and `/contact`, 那么数组是 `[ '/', '/about', '/contact' ]`.
 
-4. Enable history mode for `vue-router`:
+4. 为`vue-router`开启history mode:
+
 ```js
 const router = new VueRouter({
   mode: 'history',
