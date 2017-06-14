@@ -159,7 +159,7 @@
                 <a href="static.html">
             
                     
-                    处理静态资源
+                    静态资源处理
             
                 </a>
             
@@ -198,7 +198,7 @@
                 <a href="proxy.html">
             
                     
-                    API Proxying During Development
+                    开发环境API Proxying
             
                 </a>
             
@@ -224,7 +224,7 @@
                 <a href="e2e.html">
             
                     
-                    端到端测试
+                    e2e测试
             
                 </a>
             
@@ -318,11 +318,11 @@
 </code></pre>
 <p>&#x67E5;&#x770B; <a href="http://vuejs.github.io/vue-loader/en/features/postcss.html" target="_blank">vue-loader&#x7684;&#x76F8;&#x5173;&#x6587;&#x6863;</a> &#x83B7;&#x53D6;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x3002;</p>
 <h3 id="&#x5355;&#x72EC;&#x7684;-css-&#x6587;&#x4EF6;">&#x5355;&#x72EC;&#x7684; CSS &#x6587;&#x4EF6;</h3>
-<p>&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x4E00;&#x81F4;&#x7684;&#x62BD;&#x53D6;&#x548C;&#x5904;&#x7406;&#xFF0C;&#x5EFA;&#x8BAE;&#x5728;&#x6839;&#x7EC4;&#x4EF6;<code>App.vue</code>&#x91CC;&#x5F15;&#x7528;&#x5168;&#x5C40;&#x7684;&#x5355;&#x72EC;&#x7684;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<p>&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x4E00;&#x81F4;&#x7684;&#x62BD;&#x53D6;&#x548C;&#x5904;&#x7406;&#xFF0C;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x5728;&#x6839;&#x7EC4;&#x4EF6;<code>App.vue</code>&#x91CC;&#x5F15;&#x7528;&#x5168;&#x5C40;&#x7684;&#x5355;&#x72EC;&#x7684;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- App.vue --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./styles/global.less&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;less&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 </code></pre>
-<p>&#x6CE8;&#x610F;&#x8FD9;&#x79CD;&#x5F15;&#x7528;&#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x90A3;&#x4E9B;&#x4F60;&#x81EA;&#x5DF1;&#x5199;&#x7684;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x3002;&#x5BF9;&#x4E8E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x4F8B;&#x5982;Bootstrap&#x6216;&#x8005;Semantic UI&#x8FD9;&#x79CD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x653E;&#x5728; <code>/static</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x7136;&#x540E;&#x76F4;&#x63A5;&#x5728;<code>index.html</code>&#x91CC;&#x5F15;&#x7528;&#x3002;&#x8FD9;&#x6837;&#x907F;&#x514D;&#x989D;&#x5916;&#x7684;&#x6784;&#x5EFA;&#x65F6;&#x95F4;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#x6765;&#x8BF4;&#x4F1A;&#x66F4;&#x597D;&#x4E00;&#x4E0B;&#x3002;(&#x67E5;&#x770B; <a href="static.html">&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5904;&#x7406;</a>)</p>
+<p>&#x6CE8;&#x610F;&#x8FD9;&#x79CD;&#x5F15;&#x7528;&#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x90A3;&#x4E9B;&#x4F60;&#x81EA;&#x5DF1;&#x5199;&#x7684;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x3002;&#x5BF9;&#x4E8E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;Bootstrap&#x6216;&#x8005;Semantic UI&#x8FD9;&#x79CD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x653E;&#x5728; <code>/static</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x7136;&#x540E;&#x76F4;&#x63A5;&#x5728;<code>index.html</code>&#x91CC;&#x5F15;&#x7528;&#x5B83;&#x4EEC;&#x3002;&#x8FD9;&#x6837;&#x907F;&#x514D;&#x989D;&#x5916;&#x7684;&#x6784;&#x5EFA;&#x65F6;&#x95F4;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#x6765;&#x8BF4;&#x4F1A;&#x66F4;&#x597D;&#x4E00;&#x4E9B;&#x3002;(&#x67E5;&#x770B; <a href="static.html">&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5904;&#x7406;</a>)</p>
 
                                 
                                 </section>
@@ -355,7 +355,7 @@
                 </a>
                 
                 
-                <a href="static.html" class="navigation navigation-next " aria-label="Next page: 处理静态资源">
+                <a href="static.html" class="navigation navigation-next " aria-label="Next page: 静态资源处理">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -366,7 +366,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"预处理器","level":"1.5","depth":1,"next":{"title":"处理静态资源","level":"1.6","depth":1,"path":"static.md","ref":"static.md","articles":[]},"previous":{"title":"Linter 配置","level":"1.4","depth":1,"path":"linter.md","ref":"linter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pre-processors.md","mtime":"2017-06-07T08:51:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-08T10:37:39.455Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"预处理器","level":"1.5","depth":1,"next":{"title":"静态资源处理","level":"1.6","depth":1,"path":"static.md","ref":"static.md","articles":[]},"previous":{"title":"Linter 配置","level":"1.4","depth":1,"path":"linter.md","ref":"linter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pre-processors.md","mtime":"2017-06-14T07:02:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-14T09:23:17.911Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -374,6 +374,10 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
