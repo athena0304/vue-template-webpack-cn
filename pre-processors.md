@@ -42,12 +42,11 @@ module.exports = {
 ### 单独的 CSS 文件
 
 
-为了确保一致的抽取和处理，建议在根组件`App.vue`里引用全局的单独的样式文件。例如：
+为了确保一致的抽取和处理，强烈建议在根组件`App.vue`里引用全局的单独的样式文件。例如：
 
 ``` html
 <!-- App.vue -->
 <style src="./styles/global.less" lang="less"></style>
 ```
 
-
-注意这种引用方法应该只适用于那些你自己写的样式文件。对于已经存在的库文件例如Bootstrap或者Semantic UI这种，你可以放在 `/static`文件夹下，然后直接在`index.html`里引用。这样避免额外的构建时间，并且对于浏览器缓存来说会更好一下。(查看 [静态资源处理](static.md))
+注意这种引用方法应该只适用于那些你自己写的样式文件。对于已经存在的库文件，例如Bootstrap或者Semantic UI这种，你可以放在 `/static`文件夹下，然后直接在`index.html`里引用它们。这样避免额外的构建时间，并且对于浏览器缓存来说会更好一些。(查看 [静态资源处理](static.md))

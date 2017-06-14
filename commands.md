@@ -1,10 +1,10 @@
-# 构建指令
+# 构建命令
 
 所有的构建命令都是通过 [NPM Scripts](https://docs.npmjs.com/misc/scripts)执行的。
 
 ### `npm run dev`
 
-> 开启了一个Node.js本地开发服务。 查看 [API Proxying During Development](proxy.md) 获取更多细节。
+> 开启了一个Node.js本地开发服务。 查看 [开发环境API Proxying](proxy.md) 获取更多细节。
 
 - 单文件Vue组件使用Webpack + `vue-loader`。
 - State preserving hot-reload
@@ -14,12 +14,12 @@
 
 ### `npm run build`
 
-> 为生产构建资源. 查看 [Integrating with Backend Framework](backend.md) 获取更多细节。
+> 为生产环境构建资源. 查看 [后端框架集成](backend.md) 获取更多细节。
 
 - 使用[UglifyJS](https://github.com/mishoo/UglifyJS2)压缩Javascript.
 - 使用[html-minifier](https://github.com/kangax/html-minifier)压缩HTML.
-- 所有组件里的css都会被抽成一个单独的文件，然后使用[cssnano](https://github.com/ben-eb/cssnano)压缩.
-- 为了更有效的长期缓存，所有的静态资源都被编译成版本哈希，并且产出的`index.html`里会自动生成这些静态资源URL的引入。
+- 所有组件里的css都会被抽取出来，形成一个单独的文件，然后使用[cssnano](https://github.com/ben-eb/cssnano)压缩.
+- 为了有效的长期缓存，所有的静态资源都被编译成版本哈希，并且产出的`index.html`里会自动生成这些引入静态资源的URL。
 
 ### `npm run unit`
 

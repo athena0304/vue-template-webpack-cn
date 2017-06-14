@@ -39,7 +39,7 @@
 
 ### `config/index.js`
 
-该文件暴露出了一些最通用的构建安装配置选项，是主要配置文件。更多细节请查看[开发阶段API Proxying](proxy.md)和[后端框架集成](backend.md)。
+该文件暴露出了一些最通用的构建安装配置选项，是主要配置文件。更多细节请查看[开发环境API Proxying](proxy.md)和[后端框架集成](backend.md)。
 
 ### `src/`
 

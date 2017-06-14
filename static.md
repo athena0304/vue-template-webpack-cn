@@ -1,31 +1,27 @@
-# 静态文件处理
+# 静态资源处理
 
-你可能已经注意到，我们的项目结构里，有两个静态文件的路径，分别是：`src/assets` 和 `static/`。那这两个到底有什么区别呢？
+你可能已经注意到，在我们的项目结构里，有两个静态文件的路径，分别是：`src/assets` 和 `static/`。那这两个到底有什么区别呢？
 
-### Webpacked Assets
-
-
+### Webpacked 资源
 
 为了回答这个问题，我们首先需要理解webpack是怎样处理静态资源的。在`*.vue`组件中，所有的templates和css都会被`vue-html-loader` 和 `css-loader`解析，寻找资源的URL。举个例子，在`<img src="./logo.png">` 和 `background: url(./logo.png)`, `"./logo.png"`中，都是相对资源路径，都会被**Webpack解析成模块依赖** 。
-
 
 由于`logo.png`不是JavaScript，当被看成一个模块依赖的时候，我们需要使用`url-loader` 和 `file-loader`进行处理。
 该模板已经配置好了这些loaders，所以你能够使用相对/模块路径时不需要担心部署的问题。
 （This boilerplate has already configured these loaders for you, so you basically get features such as filename fingerprinting and conditional base64 inlining for free, while being able to use relative/module paths without worrying about deployment.）
 
-
-由于这些资源可能在构建的时候被 内联/复制/重命名， 所以它们从本质上来说是你源码的一部分。这就是为什么我们建议将交由webpack处理的静态资源和其它源文件一样放在`/src`路径下面。实际上，你甚至不需要把它们全都放在`/src/assets`路径下：你可以基于模块/组件的使用来组织文件结构。例如，你可以把每个组件和属于它的静态资源放在它自己的目录下。
+由于这些资源可能在构建的时候被内联/复制/重命名， 所以它们从本质上来说是你源码的一部分。这就是为什么我们建议将交由webpack处理的静态资源和其它源文件一样放在`/src`路径下面。实际上，你甚至不需要把它们全都放在`/src/assets`路径下：你可以基于模块/组件的使用来组织文件结构。例如，你可以把每个组件和属于它的静态资源放在它自己的目录下。
 
 
 ### 资源处理规则
 
-- **相对URLs**, e.g. `./assets/logo.png` 将会被解释成一个模块依赖。它们会被一个基于你的Webpack输出配置自动生成的URL替代。
+- **相对URL**, e.g. `./assets/logo.png` 将会被解释成一个模块依赖。它们会被一个基于你的Webpack输出配置自动生成的URL替代。
 
-- **没有前缀的URLs**, e.g. `assets/logo.png` 将会被看成相对URLs，并且转换`./assets/logo.png`
+- **没有前缀的URL**, e.g. `assets/logo.png` 将会被看成相对URLs，并且转换`./assets/logo.png`
 
-- **前缀带`~`的URLs** 会被当成模块请求, 类似于`require('some-module/image.png')`. 如果你想要利用Webpack的模块处理配置，就可以使用这个前缀。例如，如果你有一个对于`assets`的路径解析，你需要使用`<img src="~assets/logo.png">`来确保解析是对应上的。
+- **前缀带`~`的URL** 会被当成模块请求, 类似于`require('some-module/image.png')`. 如果你想要利用Webpack的模块处理配置，就可以使用这个前缀。例如，如果你有一个对于`assets`的路径解析，你需要使用`<img src="~assets/logo.png">`来确保解析是对应上的。
 
-- **相对根目录的URLs**, e.g. `/assets/logo.png` 是不会被处理的.
+- **相对根目录的URL**, e.g. `/assets/logo.png` 是不会被处理的.
 
 ### 在JavaScript里获取资源路径
 
