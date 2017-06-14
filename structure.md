@@ -47,22 +47,22 @@
 
 ### `static/`
 
-这里放的是那些你不想让Webpack接手的文件。它们会直接拷贝到 webpack-built assets生成的路径下面。
+这里放的是那些你不想让Webpack接管的文件。它们会被直接拷贝到webpack构建assets所生成的路径下面。
 
-查看 [Handling Static Assets](static.md)获取更多细节。
+查看 [处理静态资源](static.md)获取更多细节。
 
 ### `test/unit`
 
-包含单元测试相关的文件。查看 [Unit Testing](unit.md) 获取更多细节。
+包含单元测试相关的文件。查看 [单元测试](unit.md) 获取更多细节。
 
 ### `test/e2e`
 
- 包含单元测试相关的文件。查看 [End-to-end Testing](e2e.md) 获取更多细节。
+ 包含e2e测试相关的文件。查看 [e2e测试](e2e.md) 获取更多细节。
 
 ### `index.html`
 
-这就是我们单页面应用的**模板** `index.html`文件。在开发和构建过程中，Webpack会生成静态资源，并且这些静态资源的URL会自动加到这个模板里，渲染出最终的HTML。
+这就是我们单页面应用的**模板** `index.html`文件。在开发和构建过程中，Webpack会生成静态资源，并且引用这些静态资源的URL会被自动地添加到这个模板里，渲染出最终的HTML。
 
 ### `package.json`
 
-NPM打包元文件，包含所有的构建以来和[构建指令](commands.md).
+NPM打包元文件，包含所有的构建依赖和[构建指令](commands.md).

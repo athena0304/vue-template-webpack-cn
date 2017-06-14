@@ -1,4 +1,4 @@
-# End-to-end Testing
+# e2e测试
 
 This boilerplate uses [Nightwatch.js](http://nightwatchjs.org) for e2e tests. Nightwatch.js is a highly integrated e2e test runner built on top of Selenium. This boilerplate comes with Selenium server and chromedriver binaries pre-configured for you, so you don't have to mess with these yourself.
 

@@ -1,4 +1,4 @@
-# 构建命令
+# 构建指令
 
 所有的构建命令都是通过 [NPM Scripts](https://docs.npmjs.com/misc/scripts)执行的。
 
