@@ -17,7 +17,7 @@
 
 - **相对URL**, e.g. `./assets/logo.png` 将会被解释成一个模块依赖。它们会被一个基于你的Webpack输出配置自动生成的URL替代。
 
-- **没有前缀的URL**, e.g. `assets/logo.png` 将会被看成相对URLs，并且转换`./assets/logo.png`
+- **没有前缀的URL**, e.g. `assets/logo.png` 将会被看成相对URL，并且转换成`./assets/logo.png`
 
 - **前缀带`~`的URL** 会被当成模块请求, 类似于`require('some-module/image.png')`. 如果你想要利用Webpack的模块处理配置，就可以使用这个前缀。例如，如果你有一个对于`assets`的路径解析，你需要使用`<img src="~assets/logo.png">`来确保解析是对应上的。
 
@@ -25,7 +25,7 @@
 
 ### 在JavaScript里获取资源路径
 
-为了能让Webpack返回正确的资源路径，你需要使用`require('./relative/path/to/file.jpg')`，将会被`file-loader`处理，然后返回处理过的URL。例如：
+为了能让Webpack返回正确的资源路径，你需要使用`require('./relative/path/to/file.jpg')`，由`file-loader`进行解析，然后返回处理过的URL。例如：
 
 ``` js
 computed: {
@@ -35,12 +35,11 @@ computed: {
 }
 ```
 
-**注意上面的例子，在最终的构建时将会包含`./bgs/`路径下的所有图片** 这是因为Webpack不能猜出来在运行时它们当中的那个会被用到，所以会包含所有的。
+**注意上面的例子，在最终的构建时将会包含`./bgs/`路径下的所有图片** 这是因为Webpack不能猜出来在运行时会用到其中的哪个，所以会包含所有的。
 
 ### "真实的" 静态资源
 
-
-作为对比，在`static/`下的文件都不会被Webpack处理：它们使用相同的文件名，直接拷贝到最终的路径。你必须使用绝对路径引用这些文件，取决于在`config.js`里面假如的`build.assetsPublicPath` and `build.assetsSubDirectory`
+作为对比，在`static/`下的文件都不会被Webpack处理：它们使用相同的文件名，直接拷贝到最终的路径。你必须使用绝对路径来引用这些文件，取决于在`config.js`里面加入的`build.assetsPublicPath` 和 `build.assetsSubDirectory`。
 
 举个例子，下面的默认值是：
 
@@ -57,4 +56,4 @@ module.exports = {
 
 所有放在 `static/`目录下的文件都应该是使用绝对URL`/static/[filename]`引用的。如果你将`assetSubDirectory`的值改成`assets`， 那么这些URL就会被变成 `/assets/[filename]`
 
-在[backend integration](backend.md)章节我们会了解更多关于这个配置文件的内容。
+在[后端框架集成](backend.md)章节我们会了解更多关于这个配置文件的内容。
