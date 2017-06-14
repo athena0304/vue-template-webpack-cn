@@ -1,4 +1,4 @@
-# API Proxying During Development
+# 开发阶段API Proxying
 
 当和一个已经存在的后端进行模板整合的时候，一个常见的需求就是当使用dev server的时候能后获取后端API。为了实现，我们可以并行的（或者远程的）运行dev server和API后端，然后让dev server代理所有的通往真实后端的API请求。
 

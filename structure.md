@@ -17,37 +17,33 @@
 ├── static/                     # 纯静态资源 (直接拷贝)
 ├── test/
 │   └── unit/                   # 单元测试
-│   │   ├── specs/              # 测试spec文件
+│   │   ├── specs/              # 测试规格文件
 │   │   ├── index.js            # 测试构建入口文件
-│   │   └── karma.conf.js       # 测试运行配置文件
+│   │   └── karma.conf.js       # 测试运行器配置文件
 │   └── e2e/                    # e2e测试
-│   │   ├── specs/              # 测试spec文件
-│   │   ├── custom-assertions/  # custom assertions for e2e tests
-│   │   ├── runner.js           # 测试runner脚本
-│   │   └── nightwatch.conf.js  # 测试runner配置文件
+│   │   ├── specs/              # 测试规格文件
+│   │   ├── custom-assertions/  # e2e测试的自定义断言
+│   │   ├── runner.js           # 测试运行器脚本
+│   │   └── nightwatch.conf.js  # 测试运行器配置文件
 ├── .babelrc                    # babel配置
 ├── .postcssrc.js               # postcss 配置
 ├── .eslintrc.js                # eslint 配置
 ├── .editorconfig               # editor 配置
-├── index.html                  # index.html template
+├── index.html                  # index.html 模板
 └── package.json                # 构建脚本和依赖
 ```
 
 ### `build/`
 
-
-该目录包含了开发环境和生产环境的webpack构建配置。通常你不需要改动这些文件，如果想要自定义Webpack loaders，可以看`build/webpack.base.conf.js`这个文件。
+该目录包含了开发环境和生产环境的webpack构建配置。通常你不需要改动这些文件，如果想要自定义Webpack loaders，可以查看`build/webpack.base.conf.js`这个文件。
 
 ### `config/index.js`
 
-
-该文件暴露出了一些最通用的构建安装配置选项，是主要配置文件。更多细节请查看[API Proxying During Development](proxy.md)和[Integrating with Backend Framework](backend.md)。
+该文件暴露出了一些最通用的构建安装配置选项，是主要配置文件。更多细节请查看[开发阶段API Proxying](proxy.md)和[后端框架集成](backend.md)。
 
 ### `src/`
 
-This is where most of your application code will live in. How to structure everything inside this directory is largely up to you; if you are using Vuex, you can consult the [recommendations for Vuex applications](http://vuex.vuejs.org/en/structure.html).
-
-你的应用的大多数代码都应该放在这里。至于里面的文件结构是什么样的，还需要你自己好好策划一下。如果你正在使用Vuex，可以参考vuex示例项目里的结构[recommendations for Vuex applications](http://vuex.vuejs.org/en/structure.html)。
+你的应用的大多数代码都应该放在这里。至于里面的文件结构是什么样的，还需要你自己好好策划一下。如果你正在使用Vuex，可以参考vuex示例项目里的结构[Vuex应用推荐](http://vuex.vuejs.org/en/structure.html)。
 
 ### `static/`
 

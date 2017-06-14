@@ -8,7 +8,7 @@
 * [处理静态资源](static.md)
 * [环境变量](env.md)
 * [后端框架集成](backend.md)
-* [API Proxying During Development](proxy.md)
+* [开发阶段API Proxying](proxy.md)
 * [单元测试](unit.md)
 * [端到端测试](e2e.md)
 * [SEO预渲染](prerender.md)

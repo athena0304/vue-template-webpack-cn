@@ -1,14 +1,14 @@
-# 概述
+# 简介
+【译者按】本文是根据[官方文档](http://vuejs-templates.github.io/webpack/)原创翻译而来，有些语句或者一些专有名字如果翻译的不到位，欢迎大家提出来我好进行改正。这是我的[github地址](https://github.com/athena0304/vue-template-webpack-cn)。
 
+该模板是针对大型的严格的工程，并且要求你或多或少对webpack和`vue-loader`有一定的了解。一定也要也看一下[`vue-loader`的文档](http://vuejs.github.io/vue-loader/index.html) 来了解一下常规工作流方法。
 
-该模板是针对大型的严格的工程，并且要求你或多或少岁webpack和`vue-loader`有一定的了解。一定要也看一下[`vue-loader`'s documentation](http://vuejs.github.io/vue-loader/index.html) 来了解一下普通的工作流方法。
-
-如果你只想尝试一下`vue-loader`或者快速开始，那么用[webpack-simple](https://github.com/vuejs-templates/webpack-simple)这个就好。
+如果你只想尝试一下`vue-loader`或者快速开始一个原型，那么用[webpack-simple](https://github.com/vuejs-templates/webpack-simple)就好。
 
 
 ## 快速开始
 
-这个模板是基于[vue-cli](https://github.com/vuejs/vue-cli)这个脚手架搭建的。**为了确保使用更有效的依赖树，强烈建议使用npm 3以上的版本。**
+该模板是基于[vue-cli](https://github.com/vuejs/vue-cli)这个脚手架搭建的。**为了确保使用更有效的依赖树，强烈建议使用npm 3以上的版本。**
 
 ``` bash
 $ npm install -g vue-cli
